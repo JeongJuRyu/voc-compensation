@@ -1,6 +1,6 @@
-package com.voccompensation.voccompensation.voc.repository;
+package com.voccompensation.voccompensation.repository;
 
-import com.voccompensation.voccompensation.voc.entity.Voc;
+import com.voccompensation.voccompensation.entity.Voc;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VocRepository extends JpaRepository<Voc, Long> {

@@ -1,8 +1,8 @@
-package com.voccompensation.voccompensation.voc.service;
+package com.voccompensation.voccompensation.service;
 
 import com.voccompensation.voccompensation.common.dto.ResponseDto;
-import com.voccompensation.voccompensation.voc.dto.GetVocListDto;
-import com.voccompensation.voccompensation.voc.repository.VocRepositoryCustom;
+import com.voccompensation.voccompensation.dto.GetVocListDto;
+import com.voccompensation.voccompensation.repository.VocRepositoryCustom;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
