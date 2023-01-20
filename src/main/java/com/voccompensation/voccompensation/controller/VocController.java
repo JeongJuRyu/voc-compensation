@@ -1,10 +1,9 @@
-package com.voccompensation.voccompensation.voc.controller;
+package com.voccompensation.voccompensation.controller;
 
 import com.voccompensation.voccompensation.common.dto.ResponseDto;
-import com.voccompensation.voccompensation.voc.dto.GetVocListDto;
-import com.voccompensation.voccompensation.voc.service.VocService;
+import com.voccompensation.voccompensation.dto.GetVocListDto;
+import com.voccompensation.voccompensation.service.VocService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.voccompensation.voccompensation.voc.repository;
+package com.voccompensation.voccompensation.repository;
 
 public class VocRepositoryCustomImpl implements VocRepositoryCustom{
 }

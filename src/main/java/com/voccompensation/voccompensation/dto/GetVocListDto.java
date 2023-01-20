@@ -1,4 +1,4 @@
-package com.voccompensation.voccompensation.voc.dto;
+package com.voccompensation.voccompensation.dto;
 
 
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.voccompensation.voccompensation.voc.entity;
+package com.voccompensation.voccompensation.entity;
 
 
 import com.voccompensation.voccompensation.common.entity.BaseTimeEntity;
@@ -21,6 +21,10 @@ public class Voc extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     private FaultParty faultParty;
 
+    private String contentsOfFault;
 
+    private Boolean isCheckedByDriver;
+
+    private Boolean isComplainedByDriver;
 
 }
