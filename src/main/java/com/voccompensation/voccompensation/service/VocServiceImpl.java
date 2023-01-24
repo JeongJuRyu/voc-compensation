@@ -7,15 +7,14 @@ import com.voccompensation.voccompensation.repository.VocRepositoryCustom;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-
-public interface VocService {
-    /**
-     * 등록된 Voc의 List 조회
-     */
-    public ResponseDto<GetVocListDto.Response> getVocList();
-
-    /**
-     * Voc를 등록
-     */
-    public ResponseDto<PostVocDto.Response> postVoc();
+@Service
+@RequiredArgsConstructor
+public class VocServiceImpl implements VocService{
+    private final VocRepositoryCustom vocRepositoryCustom;
+    public ResponseDto<GetVocListDto.Response> getVocList(){
+        return null;
+    }
+    public ResponseDto<PostVocDto.Response> postVoc(){
+        return null;
+    }
 }

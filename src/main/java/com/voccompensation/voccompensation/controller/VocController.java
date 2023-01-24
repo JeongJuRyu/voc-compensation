@@ -2,6 +2,7 @@ package com.voccompensation.voccompensation.controller;
 
 import com.voccompensation.voccompensation.common.dto.ResponseDto;
 import com.voccompensation.voccompensation.dto.GetVocListDto;
+import com.voccompensation.voccompensation.dto.PostVocDto;
 import com.voccompensation.voccompensation.service.VocService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,10 @@ public class VocController {
 
     public ResponseEntity<ResponseDto<GetVocListDto.Response>> getVocList(){
         return new ResponseEntity(vocService.getVocList(), OK);
+    }
+
+    public ResponseEntity<ResponseDto<PostVocDto.Response>> postVoc(PostVocDto.Request request){
+        return new ResponseEntity<>(vocService.postVoc(), OK);
     }
 
 }

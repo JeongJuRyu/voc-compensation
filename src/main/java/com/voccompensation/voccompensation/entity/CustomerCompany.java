@@ -8,11 +8,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity
+
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class CustomerCompany {
     @Id @GeneratedValue
     private Long id;

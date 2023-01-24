@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Entity
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class ShippingEmployee {
     @Id @GeneratedValue
     private Long id;
