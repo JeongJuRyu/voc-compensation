@@ -8,14 +8,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Compensation{
+public class Compensation {
     @Id @GeneratedValue
     private Long id;
 

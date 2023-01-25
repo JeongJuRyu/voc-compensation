@@ -23,8 +23,17 @@ public class Voc extends BaseTimeEntity {
 
     private String contentsOfFault;
 
-    private Boolean isCheckedByDriver;
+    @Builder.Default
+    private Boolean isCheckedByDriver = Boolean.FALSE;
 
-    private Boolean isComplainedByDriver;
+    @Builder.Default
+    private Boolean isComplainedByDriver = Boolean.FALSE;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_company_id")
+    private CustomerCompany customerCompany;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "shipping_employee_id")
+    private ShippingEmployee shippingEmployee;
 }
