@@ -18,6 +18,12 @@ public class Penalty extends BaseTimeEntity {
 
     private String contents;
 
+    @Builder.Default
+    private Boolean isCheckedByDriver = Boolean.FALSE;
+
+    @Builder.Default
+    private Boolean isComplainedByDriver = Boolean.FALSE;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
     private ShippingEmployee shippingEmployee;
