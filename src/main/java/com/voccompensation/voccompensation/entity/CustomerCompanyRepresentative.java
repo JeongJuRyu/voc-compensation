@@ -1,6 +1,5 @@
 package com.voccompensation.voccompensation.entity;
 
-import com.voccompensation.voccompensation.common.entity.BaseTimeEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,15 +9,18 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class ShippingCompany extends BaseTimeEntity {
+public class CustomerCompanyRepresentative {
     @Id @GeneratedValue
     private Long id;
 
-    @Column(length = 70)
+    @Column(length = 30)
     private String name;
+    @Column(length = 14)
+    private String phoneNum;
 }

@@ -18,6 +18,7 @@ public class ShippingEmployee extends BaseTimeEntity {
     @Id @GeneratedValue
     private Long id;
 
+    @Column(length = 30)
     private String name;
 
     private Integer salary;

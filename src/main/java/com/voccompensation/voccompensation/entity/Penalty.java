@@ -25,6 +25,10 @@ public class Penalty extends BaseTimeEntity {
     private Boolean isComplainedByDriver = Boolean.FALSE;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn
+    @JoinColumn(name = "shipping_employee_id")
     private ShippingEmployee shippingEmployee;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "voc_id")
+    private Voc voc;
 }

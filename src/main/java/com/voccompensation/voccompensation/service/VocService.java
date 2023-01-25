@@ -20,7 +20,7 @@ public interface VocService {
     /**
      * Voc를 등록
      */
-    public ResponseDto<PostVocDto.Response> postVoc(PostVocDto.Request request);
+    public ResponseDto<Object> postVoc(PostVocDto.Request request);
 
     /**
      * 배상 목록을 조회

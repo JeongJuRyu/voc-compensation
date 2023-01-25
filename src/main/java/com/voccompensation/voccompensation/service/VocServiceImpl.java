@@ -14,7 +14,7 @@ public class VocServiceImpl implements VocService{
         return null;
     }
     @Override
-    public ResponseDto<PostVocDto.Response> postVoc(PostVocDto.Request request) {
+    public ResponseDto<Object> postVoc(PostVocDto.Request request) {
         return null;
     }
 

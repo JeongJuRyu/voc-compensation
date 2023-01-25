@@ -23,7 +23,7 @@ public class VocController {
     public ResponseEntity<ResponseDto<GetCompensationsDto.Response>> getCompensationList(){
         return new ResponseEntity<>(vocService.getCompensationList(), OK);
     }
-    public ResponseEntity<ResponseDto<PostVocDto.Response>> postVoc(PostVocDto.Request request){
+    public ResponseEntity<ResponseDto<Object>> postVoc(PostVocDto.Request request){
         return new ResponseEntity<>(vocService.postVoc(request), OK);
     }
 

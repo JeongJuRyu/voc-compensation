@@ -1,6 +1,7 @@
 package com.voccompensation.voccompensation.entity;
 
 import com.voccompensation.voccompensation.common.entity.BaseTimeEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -19,5 +20,6 @@ public class CustomerCompany {
     @Id @GeneratedValue
     private Long id;
 
+    @Column(length = 70)
     private String name;
 }
