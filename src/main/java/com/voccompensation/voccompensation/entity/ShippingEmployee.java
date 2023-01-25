@@ -1,9 +1,7 @@
 package com.voccompensation.voccompensation.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import com.voccompensation.voccompensation.common.entity.BaseTimeEntity;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,12 +9,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Entity
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ShippingEmployee {
+@Entity
+public class ShippingEmployee extends BaseTimeEntity {
     @Id @GeneratedValue
     private Long id;
 
@@ -24,6 +22,9 @@ public class ShippingEmployee {
 
     private Integer salary;
 
-    @OneToMany(mappedBy = "shippingEmployee")
+    @OneToOne(fetch = FetchType.LAZY)
+    private ShippingCompany shippingCompany;
+
+    @OneToMany(mappedBy = "shippingEmployee", cascade = CascadeType.MERGE, orphanRemoval = true)
     private List<Penalty> penalties;
 }

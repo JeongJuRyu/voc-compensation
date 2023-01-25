@@ -9,11 +9,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Voc extends BaseTimeEntity {
     @Id @GeneratedValue
     private Long id;
@@ -23,8 +23,11 @@ public class Voc extends BaseTimeEntity {
 
     private String contentsOfFault;
 
-    private Boolean isCheckedByDriver;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_company_id")
+    private CustomerCompany customerCompany;
 
-    private Boolean isComplainedByDriver;
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "shipping_employee_id")
+    private ShippingEmployee shippingEmployee;
 }

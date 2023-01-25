@@ -1,5 +1,6 @@
 package com.voccompensation.voccompensation.entity;
 
+import com.voccompensation.voccompensation.common.entity.BaseTimeEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -8,12 +9,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ShippingCompany {
+@Entity
+public class ShippingCompany extends BaseTimeEntity {
     @Id @GeneratedValue
     private Long id;
 
