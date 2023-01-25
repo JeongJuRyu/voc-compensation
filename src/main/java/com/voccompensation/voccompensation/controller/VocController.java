@@ -1,8 +1,7 @@
 package com.voccompensation.voccompensation.controller;
 
 import com.voccompensation.voccompensation.common.dto.ResponseDto;
-import com.voccompensation.voccompensation.dto.GetVocListDto;
-import com.voccompensation.voccompensation.dto.PostVocDto;
+import com.voccompensation.voccompensation.dto.*;
 import com.voccompensation.voccompensation.service.VocService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +20,24 @@ public class VocController {
         return new ResponseEntity(vocService.getVocList(), OK);
     }
 
+    public ResponseEntity<ResponseDto<GetCompensationsDto.Response>> getCompensationList(){
+        return new ResponseEntity<>(vocService.getCompensationList(), OK);
+    }
     public ResponseEntity<ResponseDto<PostVocDto.Response>> postVoc(PostVocDto.Request request){
-        return new ResponseEntity<>(vocService.postVoc(), OK);
+        return new ResponseEntity<>(vocService.postVoc(request), OK);
+    }
+
+    public ResponseEntity<ResponseDto<PostPenaltyDto.Response>> postPenalty(PostPenaltyDto.Request request){
+        return new ResponseEntity<>(vocService.postPenalty(request), OK);
+    }
+
+    public ResponseEntity<ResponseDto<PostCompensationDto.Response>> postCompensation(PostCompensationDto.Request request){
+        return new ResponseEntity<>(vocService.postCompensation(request), OK);
+    }
+
+    public ResponseEntity<ResponseDto<PostShippingEmployeePenaltyCheckDto.Response>> PostShippingEmployeePenaltyCheck
+            (PostShippingEmployeePenaltyCheckDto.Request request){
+        return new ResponseEntity<>(vocService.postShippingEmployeePenaltyCheck(request), OK);
     }
 
 }
